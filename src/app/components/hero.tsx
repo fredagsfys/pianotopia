@@ -16,7 +16,8 @@ export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source
-          src="https://github.com/fredagsfys/pianotopia/blob/main/public/piano.mp4"
+          // src="https://github.com/fredagsfys/pianotopia/blob/main/public/piano.mp4"
+          src="/piano.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
