@@ -37,7 +37,7 @@ export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
             before:z-[-5]"
       ></div>
       <div className="backdrop-blur-sm h-full w-full"></div>
-      <div className="w-96 absolute [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] bottom-1/4 px-4 md:px-0 left-0 md:left-1/4 right-0 text-white z-30 grid items-start gap-4">
+      <div className=" animate-fadeIn w-96 absolute [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] bottom-1/4 px-4 md:px-0 left-0 md:left-1/4 right-0 text-white z-30 grid items-start gap-4">
         <h1 className="text-5xl font-bold">
           Begin Your Musical Journey Today.
         </h1>
