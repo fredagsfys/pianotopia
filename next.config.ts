@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // basePath: "/pianotopia",
-  // output: "export",
+  basePath: "/pianotopia",
+  output: "export",
   reactStrictMode: true,
   images: {
     domains: [
