@@ -24,7 +24,7 @@ export default function Menu() {
     // </div>
     <div className="mx-auto container rounded-full flex items-center justify-center text-5xl font-bold w-64 xl:w-96">
       <Image
-        src="/pianotopia/logo.png"
+        src={`/pianotopia/logo10.png`}
         alt="logotype"
         width={600}
         height={600}
@@ -38,7 +38,7 @@ export default function Menu() {
       >
         <div className="flex items-start w-24 container">
           <Image
-            src="/pianotopia/logoalt.png"
+            src={`/pianotopia/logoalt10.png`}
             alt="logotype"
             width={600}
             height={600}
