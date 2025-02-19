@@ -14,15 +14,14 @@ export default function Biography() {
         <div className="relative">
           <div className="relative z-10">
             <p className="text-lg sm:text-2xl mb-8">
-              Gravida quam mi erat tortor neque molestie. Auctor aliquet at
-              porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor
-              posuere. Nunc eu scelerisque interdum eget tellus non nibh
-              scelerisque bibendum.
+              Att kliva in i en musikalisk värld där tid och rum försvinner är
+              magiskt – att spela piano ska vara roligt, lärorikt och
+              meningsfullt, men ibland också härligt knasigt!
             </p>
             <p className="font-bold">Suzana Spasevska Hermansen</p>
 
             <p className="text-gray-400 mb-12 lg:mb-0">
-              CEO / Mentor at Pianotopia
+              VD och pianolärare på Pianotopia
             </p>
           </div>
           <svg

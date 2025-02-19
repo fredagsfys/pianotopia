@@ -37,19 +37,18 @@ export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
       ></div>
       <div className="backdrop-blur-sm h-full w-full"></div>
       <div className="animate-fadeIn w-96 absolute [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] bottom-1/4 px-4 md:px-0 left-0 md:left-1/4 right-0 text-white z-30 grid items-start gap-4">
-        <h1 className="text-3xl sm:text-5xl font-bold">
-          Begin Your Musical Journey Today.
-        </h1>
+        <h1 className="text-3xl sm:text-5xl font-bold">Nyfiken på piano?</h1>
         <p className="text-base font-semibold">
-          Unlock your potential and explore the world of music like never
-          before. Whether you&apos;re a beginner or looking to refine your
-          skills, our programs are designed to guide you every step of the way.
+          Letar du också efter den bästa pianoundervisningen för ditt barn i
+          Kalmar regionen? Då har du hittat helt rätt! På Pianotopia är
+          ledorden: kreativitet, lekfullhet och gemenskap. Anmäl ditt barns
+          intresse idag så återkommer jag med mer info.
         </p>
         <button
           className="font-bold rounded-full border border-solid border-gray-200 border-black/[.08] transition-colors flex items-center justify-center hover:text-foreground bg-white bg-opacity-25 hover:bg-gray-200 hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
           onClick={scrollToBottom}
         >
-          Enrollment
+          Ja, tack, jag vill veta mer!
         </button>
       </div>
     </div>

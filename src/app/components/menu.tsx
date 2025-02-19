@@ -19,9 +19,6 @@ export default function Menu() {
   }, []);
 
   return (
-    // <div className="mt-12 w-32 h-32 mx-auto container rounded-full border-2 bg-gray-900/80 flex items-center justify-center">
-    //   <p className="uppercase font-bold text-2xl">Logo</p>
-    // </div>
     <div className="mx-auto container rounded-full flex items-center justify-center text-5xl font-bold w-64 xl:w-96">
       <Image
         src={`/pianotopia/logo10.png`}

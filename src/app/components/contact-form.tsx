@@ -23,25 +23,25 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
     <section className="bg-gray-900 text-white py-16">
       <div className="px-4 max-w-xl mx-auto text-center">
         <h2 className="text-4xl font-display font-bold mb-6">
-          Start Your Journey Today
+          Börja din musikaliska resa idag
         </h2>
         <p className="mb-8">
-          Fill out the form below and we&apos;ll contact you to schedule your
-          first lesson.
+          Fyll i formuläret nedan för att få mer info om pianolektionerna på
+          Pianotopia. (ej bindande)
         </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <Input
-            placeholder="Your Name"
+            placeholder="Namn"
             className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
             ref={nameInputRef}
           />
           <Input
             type="email"
-            placeholder="Email Address"
+            placeholder="Email för kontakt"
             className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
           />
           <Textarea
-            placeholder="Tell us about your musical experience and goals..."
+            placeholder="Beskriv barnets ålder och nivå (nybörjare, grundläggande, avancerad)"
             className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
           />
 
@@ -49,7 +49,7 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
             type="submit"
             className="w-full font-bold rounded-full border border-solid border-white/20 transition-colors flex items-center justify-center hover:text-foreground bg-transparent text-white/60 hover:bg-white/80 hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
           >
-            Enroll
+            Skicka
           </Button>
         </form>
       </div>

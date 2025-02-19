@@ -6,7 +6,6 @@ import Hero from "./components/hero";
 import { InstrumentsShowcase } from "./components/instruments";
 import { Introduction } from "./components/introduction";
 import Menu from "./components/menu";
-import { Testimonials } from "./components/testimonials";
 
 export default function Home() {
   const formNameInputRef = createRef<HTMLInputElement>();
@@ -28,7 +27,7 @@ export default function Home() {
         <Introduction />
         <Biography />
         <InstrumentsShowcase />
-        <Testimonials />
+        {/* <Testimonials /> */}
       </main>
       <footer className="w-full">
         <ContactForm nameInputRef={formNameInputRef} />
