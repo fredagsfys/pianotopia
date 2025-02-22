@@ -20,7 +20,7 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-16">
+    <section className="bg-primary text-white py-16">
       <div className="px-4 max-w-xl mx-auto text-center">
         <h2 className="text-4xl font-display font-bold mb-6">
           Börja din musikaliska resa idag

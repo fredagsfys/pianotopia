@@ -27,7 +27,7 @@ export const Introduction = () => {
         problem, skicka in en intresseanmälan så tar vi det därifrån.
       </p>
       <p className="text-lg">
-        Välkommen att anmäla ditt intresse!(länk till intresseanmälan)
+        Välkommen att anmäla ditt intresse! (länk till intresseanmälan)
       </p>
     </section>
   );
