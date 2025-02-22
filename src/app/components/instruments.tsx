@@ -76,7 +76,10 @@ export const InstrumentsShowcase = () => {
                 </p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Link href={`/lesson/${instrument.name}`} className="w-full">
+                <Link
+                  href={`/lesson/${instrument.name.toLocaleLowerCase()}`}
+                  className="w-full"
+                >
                   <Button
                     variant="outline"
                     className="w-full bg-piano-primary hover:bg-piano-secondary transition-colors duration-300"

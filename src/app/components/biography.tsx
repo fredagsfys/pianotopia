@@ -10,7 +10,7 @@ export default function Biography() {
           alt="person"
           width={500}
           height={500}
-          className="rounded-2xl relative w-full object-cover aspect-video lg:aspect-auto lg:w-72 -my-4 lg:-my-4 mb-24"
+          className="rounded-2xl relative w-full object-cover aspect-video object-top lg:object-fill lg:aspect-auto lg:w-72 -my-4 lg:-my-4 mb-24"
         />
         <div className="relative">
           <div className="relative z-10">
