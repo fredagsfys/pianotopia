@@ -2,6 +2,7 @@
 import { createRef } from "react";
 import Biography from "./components/biography";
 import { ContactForm } from "./components/contact-form";
+import Footer from "./components/footer";
 import Hero from "./components/hero";
 import { InstrumentsShowcase } from "./components/instruments";
 import { Introduction } from "./components/introduction";
@@ -31,6 +32,8 @@ export default function Home() {
       </main>
       <footer className="w-full">
         <ContactForm nameInputRef={formNameInputRef} />
+
+        <Footer />
       </footer>
     </div>
   );
