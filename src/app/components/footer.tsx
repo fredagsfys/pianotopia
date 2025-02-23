@@ -1,36 +1,36 @@
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Instagram } from "lucide-react";
 const Footer = () => {
   const socialLinks = [
-    {
-      icon: Facebook,
-      href: "https://facebook.com",
-      label: "Facebook",
-      className: "text-[#4267B2]/80 hover:text-[#4267B2]", // Muted Facebook blue
-    },
+    // {
+    //   icon: Facebook,
+    //   href: "https://facebook.com",
+    //   label: "Facebook",
+    //   className: "text-[#4267B2]/80 hover:text-[#4267B2]", // Muted Facebook blue
+    // },
     {
       icon: Instagram,
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/pianotopia_kalmar",
       label: "Instagram",
       className: "text-[#E1306C]/80 hover:text-[#E1306C]", // Muted Instagram pink
     },
-    {
-      icon: Twitter,
-      href: "https://twitter.com",
-      label: "Twitter",
-      className: "text-[#1DA1F2]/80 hover:text-[#1DA1F2]", // Muted Twitter blue
-    },
-    {
-      icon: Youtube,
-      href: "https://youtube.com",
-      label: "Youtube",
-      className: "text-[#FF0000]/80 hover:text-[#FF0000]", // Muted YouTube red
-    },
-    {
-      icon: Linkedin,
-      href: "https://linkedin.com",
-      label: "LinkedIn",
-      className: "text-[#0A66C2]/80 hover:text-[#0A66C2]", // Muted LinkedIn blue
-    },
+    // {
+    //   icon: Twitter,
+    //   href: "https://twitter.com",
+    //   label: "Twitter",
+    //   className: "text-[#1DA1F2]/80 hover:text-[#1DA1F2]", // Muted Twitter blue
+    // },
+    // {
+    //   icon: Youtube,
+    //   href: "https://youtube.com",
+    //   label: "Youtube",
+    //   className: "text-[#FF0000]/80 hover:text-[#FF0000]", // Muted YouTube red
+    // },
+    // {
+    //   icon: Linkedin,
+    //   href: "https://linkedin.com",
+    //   label: "LinkedIn",
+    //   className: "text-[#0A66C2]/80 hover:text-[#0A66C2]", // Muted LinkedIn blue
+    // },
   ];
 
   return (

@@ -5,7 +5,7 @@ export default function Biography() {
     <section className="bg-primary text-white relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 h-full items-center lg:px-24 container mx-auto px-4">
         <Image
-          src="/pianotopia/suzana.jpg"
+          src="/suzana.jpg"
           // src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
           alt="person"
           width={500}

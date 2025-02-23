@@ -4,8 +4,8 @@ import Biography from "./components/biography";
 import { ContactForm } from "./components/contact-form";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
-import { InstrumentsShowcase } from "./components/instruments";
 import { Introduction } from "./components/introduction";
+import { Lessons } from "./components/lessons";
 import Menu from "./components/menu";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 
   const scrollToBottom = () => {
     formNameInputRef.current?.scrollIntoView();
-    setTimeout(() => formNameInputRef.current?.focus(), 500);
+    setTimeout(() => formNameInputRef.current?.focus(), 800);
   };
 
   return (
@@ -25,14 +25,15 @@ export default function Home() {
         </div>
       </header>
       <main className="w-full grid grid-cols-1 gap-40">
-        <Introduction />
+        <Introduction
+          viewRef={formNameInputRef}
+          scrollToBottom={scrollToBottom}
+        />
         <Biography />
-        <InstrumentsShowcase />
-        {/* <Testimonials /> */}
+        <Lessons />
       </main>
       <footer className="w-full">
         <ContactForm nameInputRef={formNameInputRef} />
-
         <Footer />
       </footer>
     </div>
