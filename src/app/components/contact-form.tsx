@@ -2,21 +2,45 @@ import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui/input";
 import { Textarea } from "@/app/components/ui/textarea";
 import { useToast } from "@/app/components/ui/use-toast";
-import { RefObject } from "react";
+import emailjs from "emailjs-com";
+import { RefObject, useState } from "react";
+
 interface ContactFormProps {
   nameInputRef: RefObject<HTMLInputElement | null>;
 }
 
 export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
   const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Thanks for your interest!",
-      description:
-        "We'll get back to you shortly about starting your musical journey.",
-    });
+
+    emailjs
+      .send(
+        "service_dcxeqrv",
+        "template_mxcq4bn",
+        formData,
+        "3f9GhNS-krYicIcaG",
+      )
+      .then(() => {
+        toast({
+          title: "Tack för ditt meddelande!",
+          description:
+            "Vi återkommer snart till dig om att starta din musikaliska resa.",
+        });
+      })
+      .catch((error) => console.error("Error sending email:", error));
   };
 
   return (
@@ -32,17 +56,23 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <Input
             placeholder="Namn"
+            name="name"
             className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
             ref={nameInputRef}
+            onChange={handleChange}
           />
           <Input
             type="email"
+            name="email"
             placeholder="Email för kontakt"
             className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+            onChange={handleChange}
           />
           <Textarea
+            name="message"
             placeholder="Beskriv barnets ålder och nivå (nybörjare, grundläggande, avancerad)"
             className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+            onChange={handleChange}
           />
 
           <Button
