@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const geistSans = Cormorant({
@@ -28,6 +29,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster
+          toastOptions={{
+            duration: 15000,
+            className: "font-[family-name:var(--font-geist-sans)]",
+          }}
+        />
       </body>
     </html>
   );
