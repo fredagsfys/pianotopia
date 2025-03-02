@@ -39,7 +39,7 @@ export default function Menu() {
             alt="logotype"
             width={600}
             height={600}
-            className="object-cover "
+            className="object-cover z-50"
           />
         </div>
       </div>

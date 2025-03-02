@@ -16,9 +16,16 @@ export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source
-          src="https://myrstackstrapistorefront.blob.core.windows.net/content/assets/piano.mp4"
-          // src="/piano.mp4"
+          src="https://myrstackstorefront.azureedge.net/content/assets/piano.mp4"
           type="video/mp4"
+        />
+        <source
+          src="https://myrstackstorefront.azureedge.net/content/assets/piano_fe09eb9b9d.ogg"
+          type="video/ogg"
+        />
+        <source
+          src="https://myrstackstorefront.azureedge.net/content/assets/piano_dc3cd89bee.webm"
+          type="video/webm"
         />
         Your browser does not support the video tag.
       </video>
