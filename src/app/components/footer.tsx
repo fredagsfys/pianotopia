@@ -1,12 +1,12 @@
-import { Instagram } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 const Footer = () => {
   const socialLinks = [
-    // {
-    //   icon: Facebook,
-    //   href: "https://facebook.com",
-    //   label: "Facebook",
-    //   className: "text-[#4267B2]/80 hover:text-[#4267B2]", // Muted Facebook blue
-    // },
+    {
+      icon: Facebook,
+      href: "https://facebook.com/profile.php?id=61572401620065&sk=about",
+      label: "Facebook",
+      className: "text-[#4267B2]/80 hover:text-[#4267B2]", // Muted Facebook blue
+    },
     {
       icon: Instagram,
       href: "https://www.instagram.com/pianotopia_kalmar",
@@ -56,7 +56,8 @@ const Footer = () => {
             ))}
           </div>
           <p className="text-sm text-gray-200">
-            {new Date().getFullYear()} Pianotopia.
+            {new Date().getFullYear()} Pianotopia. | Följ oss gärna på sociala
+            medier.
           </p>
         </div>
       </div>

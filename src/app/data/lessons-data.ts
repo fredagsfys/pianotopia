@@ -2,7 +2,7 @@ export const lessons = [
   {
     name: "Grupplektioner",
     image:
-      "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?q=80&w=1848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: `
       På Pianotopia erbjuder jag grupplektioner för yngre barn (ca 7-12 år), där fokus ligger på att barn ska få möjlighet att upptäcka musikens värld på ett roligt och engagerande sätt. Men det handlar inte bara om att lära sig spela piano- här utvecklar barnen även andra viktiga färdigheter som de har nytta av långt utanför musikens område. 
 

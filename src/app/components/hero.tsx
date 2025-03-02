@@ -1,11 +1,8 @@
-import { RefObject } from "react";
-
 interface HeroProps {
-  viewRef: RefObject<HTMLInputElement | null>;
   scrollToBottom: (timeout: number) => void;
 }
 
-export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
+export default function Hero({ scrollToBottom }: HeroProps) {
   return (
     <div className="relative flex items-center justify-center h-screen overflow-hidden">
       <video
@@ -52,7 +49,7 @@ export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
           intresse idag så återkommer jag med mer info.
         </p>
         <button
-          className="font-bold rounded-full border border-solid border-gray-200 border-black/[.08] transition-colors flex items-center justify-center hover:text-foreground bg-white bg-opacity-25 hover:bg-gray-200 hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+          className="font-bold rounded-lg border border-solid border-gray-200 border-black/[.08] transition-colors flex items-center justify-center hover:text-foreground bg-white bg-opacity-25 hover:bg-gray-200 hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
           onClick={() => scrollToBottom(800)}
         >
           Ja, tack, jag vill veta mer!

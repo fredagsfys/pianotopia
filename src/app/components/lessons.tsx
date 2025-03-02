@@ -6,16 +6,17 @@ import {
 } from "@/app/components/ui/card";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { RefObject, useState } from "react";
 import { lessons } from "../data/lessons-data";
 import LessonDetails, { Lesson } from "./lesson-details";
 import { Button } from "./ui/button";
 
 interface LessonsProps {
+  titleRef: RefObject<HTMLHeadingElement | null>;
   scrollToBottom: (timeout: number) => void;
 }
 
-export const Lessons = ({ scrollToBottom }: LessonsProps) => {
+export const Lessons = ({ titleRef, scrollToBottom }: LessonsProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLesson, setLesson] = useState<Lesson | null>(null);
 
@@ -26,7 +27,10 @@ export const Lessons = ({ scrollToBottom }: LessonsProps) => {
   return (
     <section>
       <div className="container mx-auto px-4 xl:px-0">
-        <h2 className="text-4xl font-display font-bold text-center mb-12">
+        <h2
+          className="text-4xl font-display font-bold text-center mb-12"
+          ref={titleRef}
+        >
           Lär dig spela piano på ditt sätt
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 animate-fade-in">

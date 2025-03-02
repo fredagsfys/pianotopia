@@ -19,7 +19,7 @@ export default function Menu() {
   }, []);
 
   return (
-    <div className="mx-auto container rounded-full flex items-center justify-center text-5xl font-bold w-64 xl:w-96">
+    <div className="mx-auto container rounded-full flex items-center justify-center text-5xl font-bold landscape:w-64 w-64 xl:w-96">
       <Image
         src={`/logo10.png`}
         alt="logotype"
