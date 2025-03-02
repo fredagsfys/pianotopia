@@ -2,7 +2,7 @@ import { RefObject } from "react";
 
 interface HeroProps {
   viewRef: RefObject<HTMLInputElement | null>;
-  scrollToBottom: () => void;
+  scrollToBottom: (timeout: number) => void;
 }
 
 export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
@@ -46,7 +46,7 @@ export default function Hero({ viewRef, scrollToBottom }: HeroProps) {
         </p>
         <button
           className="font-bold rounded-full border border-solid border-gray-200 border-black/[.08] transition-colors flex items-center justify-center hover:text-foreground bg-white bg-opacity-25 hover:bg-gray-200 hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-          onClick={scrollToBottom}
+          onClick={() => scrollToBottom(800)}
         >
           Ja, tack, jag vill veta mer!
         </button>

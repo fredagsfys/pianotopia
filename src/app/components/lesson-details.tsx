@@ -8,6 +8,7 @@ interface ModalProps {
   open: boolean;
   setOpen: (open: boolean) => void;
   lesson: Lesson | null;
+  onEnrol: () => void;
 }
 
 export interface Lesson {
@@ -16,7 +17,7 @@ export interface Lesson {
   description: string;
 }
 
-export default function Modal({ open, setOpen, lesson }: ModalProps) {
+export default function Modal({ open, setOpen, lesson, onEnrol }: ModalProps) {
   return (
     <Dialog
       open={open}
@@ -44,7 +45,16 @@ export default function Modal({ open, setOpen, lesson }: ModalProps) {
                   </CardHeader>
                   <CardContent className="p-6 space-y-4 text-gray-600">
                     <h3 className="text-2xl mb-4 font-bold">{lesson.name}</h3>
-                    <p>{lesson.description}</p>
+
+                    <div className="text-gray-700 space-y-4">
+                      {lesson.description
+                        .trim()
+                        .split("\n")
+                        .filter((paragraph) => paragraph.trim() !== "")
+                        .map((paragraph, i) => (
+                          <p key={i}>{paragraph.trim()}</p>
+                        ))}
+                    </div>
                   </CardContent>
                 </Card>
               ) : (
@@ -59,14 +69,19 @@ export default function Modal({ open, setOpen, lesson }: ModalProps) {
             <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  onEnrol();
+                }}
                 className="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-bold text-white shadow-xs hover:bg-green-500 sm:ml-3 sm:w-auto"
               >
-                Anmälan
+                Till anmälan
               </button>
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                }}
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-bold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto"
               >
                 Stäng

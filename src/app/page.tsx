@@ -11,9 +11,9 @@ import Menu from "./components/menu";
 export default function Home() {
   const formNameInputRef = createRef<HTMLInputElement>();
 
-  const scrollToBottom = () => {
+  const scrollToBottom = (timeout: number) => {
     formNameInputRef.current?.scrollIntoView();
-    setTimeout(() => formNameInputRef.current?.focus(), 800);
+    setTimeout(() => formNameInputRef.current?.focus(), timeout);
   };
 
   return (
@@ -30,7 +30,7 @@ export default function Home() {
           scrollToBottom={scrollToBottom}
         />
         <Biography />
-        <Lessons />
+        <Lessons scrollToBottom={scrollToBottom} />
       </main>
       <footer className="w-full">
         <ContactForm nameInputRef={formNameInputRef} />

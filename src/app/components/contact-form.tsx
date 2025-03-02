@@ -9,7 +9,49 @@ interface ContactFormProps {
   nameInputRef: RefObject<HTMLInputElement | null>;
 }
 
+const AccordionLoader = () => {
+  return (
+    <svg
+      width="40"
+      height="20"
+      viewBox="0 0 40 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="animate-pulse"
+    >
+      <rect x="0" y="5" width="10" height="10" fill="white">
+        <animate
+          attributeName="x"
+          values="0; 5; 0"
+          dur="0.6s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      <rect x="15" y="5" width="10" height="10" fill="white">
+        <animate
+          attributeName="x"
+          values="15; 10; 15"
+          dur="0.6s"
+          repeatCount="indefinite"
+        />
+      </rect>
+      <rect x="30" y="5" width="10" height="10" fill="white">
+        <animate
+          attributeName="x"
+          values="30; 25; 30"
+          dur="0.6s"
+          repeatCount="indefinite"
+        />
+      </rect>
+    </svg>
+  );
+};
+
+export default AccordionLoader;
+
 export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
+  const [loading, setLoading] = useState(false); // ✅ Loading state
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +66,7 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true); // ✅ Start loading
 
     emailjs
       .send(
@@ -67,6 +110,7 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
       )
       .finally(() => {
         setFormData({ name: "", email: "", message: "" });
+        setLoading(false); // ✅ Stop loading
       });
   };
 
@@ -113,7 +157,7 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
             type="submit"
             className="w-full font-bold rounded-full border border-solid border-white/20 transition-colors flex items-center justify-center hover:text-foreground bg-transparent text-white/60 hover:bg-white/80 hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
           >
-            Skicka
+            {loading ? <AccordionLoader /> : "Skicka"}
           </Button>
         </form>
       </div>

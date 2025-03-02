@@ -2,7 +2,7 @@ import { RefObject } from "react";
 
 interface IntroProps {
   viewRef: RefObject<HTMLInputElement | null>;
-  scrollToBottom: () => void;
+  scrollToBottom: (timeout: number) => void;
 }
 
 export const Introduction = ({ viewRef, scrollToBottom }: IntroProps) => {
@@ -36,7 +36,7 @@ export const Introduction = ({ viewRef, scrollToBottom }: IntroProps) => {
       <p className="text-lg">Välkommen att anmäla ditt intresse!</p>
       <button
         className="font-bold rounded-full border border-solid border-gray-200 border-black/[.08] transition-colors flex items-center justify-center hover:text-foreground bg-white bg-opacity-25 hover:bg-primary/5 hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-        onClick={scrollToBottom}
+        onClick={() => scrollToBottom(800)}
       >
         Till anmälan
       </button>

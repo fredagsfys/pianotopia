@@ -11,9 +11,17 @@ import { lessons } from "../data/lessons-data";
 import LessonDetails, { Lesson } from "./lesson-details";
 import { Button } from "./ui/button";
 
-export const Lessons = () => {
+interface LessonsProps {
+  scrollToBottom: (timeout: number) => void;
+}
+
+export const Lessons = ({ scrollToBottom }: LessonsProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLesson, setLesson] = useState<Lesson | null>(null);
+
+  const handleEnrol = () => {
+    scrollToBottom(500);
+  };
 
   return (
     <section>
@@ -66,6 +74,7 @@ export const Lessons = () => {
           open={isOpen}
           setOpen={setIsOpen}
           lesson={currentLesson}
+          onEnrol={handleEnrol}
         />
       </div>
     </section>
