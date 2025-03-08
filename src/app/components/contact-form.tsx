@@ -120,7 +120,7 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
         <h2 className="text-4xl font-display font-bold mb-6">
           Börja din musikaliska resa idag
         </h2>
-        <p className="mb-8">
+        <p className="mb-8 text-justify">
           Fyll i formuläret nedan för att få mer info om pianolektionerna på
           Pianotopia. (ej bindande)
         </p>

@@ -4,7 +4,7 @@ export default function Biography() {
   return (
     <section>
       <div className="bg-primary text-white relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 h-full items-center lg:px-24 container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 h-full items-center lg:px-24 container mx-auto px-4 text-justify">
           <Image
             src="/suzana.jpg"
             alt="person"
@@ -42,7 +42,7 @@ export default function Biography() {
       </div>
       <div className="px-4 max-w-xl mx-auto text-center space-y-4 mt-12">
         <h2 className="text-4xl font-display font-bold mb-6">Hej där! 👋</h2>
-        <p className="text-lg">
+        <p className="text-lg text-justify">
           Mitt namn är Suzana Spasevska Hermansen och det är jag som driver
           Pianotopia. Med mer än 10 års erfarenhet av både pedagogisk verksamhet
           inom kommunal skola och kulturskola samt som frilansande pianist har
@@ -54,7 +54,7 @@ export default function Biography() {
           filmmusik så hjälper jag ditt barn att utveckla teknik, uttryck och
           respekt för musiken.
         </p>
-        <p className="text-lg">
+        <p className="text-lg text-justify">
           Min musikaliska resa började med klassisk musik redan vid 6 års åldern
           för att senare under min ungdomstid upptäcka pop/rock och jazz. Vidare
           upptäckte jag magin i filmmusiken och euforin av att uppträda med

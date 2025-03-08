@@ -15,6 +15,7 @@ export interface Lesson {
   name: string;
   image: string;
   description: string;
+  descriptionHTML: string;
 }
 
 export default function Modal({ open, setOpen, lesson, onEnrol }: ModalProps) {
@@ -43,10 +44,10 @@ export default function Modal({ open, setOpen, lesson, onEnrol }: ModalProps) {
                       />
                     </div>
                   </CardHeader>
-                  <CardContent className="p-6 space-y-4 text-gray-600">
+                  <CardContent className="p-6 space-y-4 text-gray-600 text-justify">
                     <h3 className="text-2xl mb-4 font-bold">{lesson.name}</h3>
 
-                    <div className="text-gray-700 space-y-4">
+                    {/* <div className="text-gray-700 space-y-4">
                       {lesson.description
                         .trim()
                         .split("\n")
@@ -54,7 +55,14 @@ export default function Modal({ open, setOpen, lesson, onEnrol }: ModalProps) {
                         .map((paragraph, i) => (
                           <p key={i}>{paragraph.trim()}</p>
                         ))}
-                    </div>
+                    </div> */}
+
+                    <p
+                      className="space-y-4"
+                      dangerouslySetInnerHTML={{
+                        __html: lesson.descriptionHTML,
+                      }}
+                    />
                   </CardContent>
                 </Card>
               ) : (

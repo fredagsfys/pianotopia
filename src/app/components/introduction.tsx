@@ -8,7 +8,7 @@ export const Introduction = ({
   scrollToLessons,
 }: IntroProps) => {
   return (
-    <section className="bg-white container max-w-2xl mx-auto px-4 md:px-0 space-y-4">
+    <section className="bg-white container max-w-2xl mx-auto px-4 md:px-0 space-y-4  text-justify">
       <h2 className="text-4xl font-display font-bold text-center mb-12 text-primary">
         Välkommen till Pianotopia – där pianodrömmar blir verklighet
       </h2>

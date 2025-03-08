@@ -33,7 +33,7 @@ export const Lessons = ({ titleRef, scrollToBottom }: LessonsProps) => {
         >
           Lär dig spela piano på ditt sätt
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 animate-fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 animate-fade-in text-justify">
           {lessons.map((lesson) => (
             <Card
               key={lesson.name}

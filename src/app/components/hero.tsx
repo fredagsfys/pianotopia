@@ -4,7 +4,7 @@ interface HeroProps {
 
 export default function Hero({ scrollToBottom }: HeroProps) {
   return (
-    <div className="relative flex items-center justify-center h-screen overflow-hidden">
+    <div className="relative flex items-center justify-center h-screen overflow-hidden text-justify">
       <video
         autoPlay
         muted
