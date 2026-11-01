@@ -1,7 +1,7 @@
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui/input";
 import { Textarea } from "@/app/components/ui/textarea";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { RefObject, useState } from "react";
 import toast from "react-hot-toast";
 
