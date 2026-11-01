@@ -44,10 +44,7 @@ export default function RootLayout({
           property="og:description"
           content="Pianotopia.se - Privat pianoskola i Kalmar."
         />
-        <meta
-          property="og:image"
-          content="https://pianotopia.se/_next/image?url=/logo10.png"
-        />
+        <meta property="og:image" content="https://pianotopia.se/logo10.png" />
         <meta property="og:url" content="https://pianotopia.se" />
         <meta property="og:type" content="website" />
 
