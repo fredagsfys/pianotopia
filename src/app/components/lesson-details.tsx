@@ -40,6 +40,7 @@ export default function Modal({ open, setOpen, lesson, onEnrol }: ModalProps) {
                         alt=""
                         width={800}
                         height={800}
+                        sizes="(min-width: 640px) 512px, 100vw"
                         className="opacity-85 w-full h-full object-cover"
                       />
                     </div>
