@@ -12,18 +12,9 @@ export default function Hero({ scrollToBottom }: HeroProps) {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source
-          src="https://myrstackstorefront.azureedge.net/content/assets/piano.mp4"
-          type="video/mp4"
-        />
-        <source
-          src="https://myrstackstorefront.azureedge.net/content/assets/piano_fe09eb9b9d.ogg"
-          type="video/ogg"
-        />
-        <source
-          src="https://myrstackstorefront.azureedge.net/content/assets/piano_dc3cd89bee.webm"
-          type="video/webm"
-        />
+        <source src="/videos/piano.mp4" type="video/mp4" />
+        <source src="/videos/piano.ogg" type="video/ogg" />
+        <source src="/videos/piano.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <div
