@@ -48,17 +48,7 @@ export default function Modal({ open, setOpen, lesson, onEnrol }: ModalProps) {
                   <CardContent className="p-6 space-y-4 text-gray-600 text-justify">
                     <h3 className="text-2xl mb-4 font-bold">{lesson.name}</h3>
 
-                    {/* <div className="text-gray-700 space-y-4">
-                      {lesson.description
-                        .trim()
-                        .split("\n")
-                        .filter((paragraph) => paragraph.trim() !== "")
-                        .map((paragraph, i) => (
-                          <p key={i}>{paragraph.trim()}</p>
-                        ))}
-                    </div> */}
-
-                    <p
+                    <div
                       className="space-y-4"
                       dangerouslySetInnerHTML={{
                         __html: lesson.descriptionHTML,
