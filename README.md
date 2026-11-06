@@ -27,5 +27,5 @@ Cloudflare builds and deploys automatically on every push to `main` (build comma
 
 ## Notes
 
-- Images go through a custom loader (`src/app/lib/image-loader.ts`) because there is no image optimization server. Unsplash images are resized by Unsplash; local images are served as-is.
+- Images go through a custom loader (`src/app/lib/image-loader.ts`) because there is no image optimization server. Lesson photos (originally from Unsplash) are pre-resized WebP files in `public/images/lessons/` (`<name>-<width>.webp`); other images are served as-is.
 - The contact form sends email client-side via [EmailJS](https://www.emailjs.com).
