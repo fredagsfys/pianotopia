@@ -52,7 +52,9 @@ export const Introduction = ({
 
       <p className="text-lg">
         Frågor? Maila gärna direkt till{" "}
-        <span className="font-semibold">hej@pianotopia.se</span>
+        <a href="mailto:hej@pianotopia.se" className="font-semibold">
+          hej@pianotopia.se
+        </a>
       </p>
     </section>
   );
