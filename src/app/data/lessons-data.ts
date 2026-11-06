@@ -1,7 +1,7 @@
 export const lessons = [
   {
     name: "Grupplektioner",
-    image: "/images/lessons/grupplektioner.webp",
+    image: "/images/lessons/grupplektioner",
     description: `
       På Pianotopia erbjuder jag grupplektioner för yngre barn (ca 7-12 år), där fokus ligger på att barn ska få möjlighet att upptäcka musikens värld på ett roligt och engagerande sätt. Men det handlar inte bara om att lära sig spela piano- här utvecklar barnen även andra viktiga färdigheter som de har nytta av långt utanför musikens område.
 
@@ -39,7 +39,7 @@ export const lessons = [
   },
   {
     name: "Individuella pianolektioner",
-    image: "/images/lessons/individuella.webp",
+    image: "/images/lessons/individuella",
     description: `
       De individuella pianolektionerna är helt anpassade efter elevens mål, ambitioner och förutsättningar. Vill ditt barn lära sig kompa en kompis som spelar ett annat instrument eller rent av vill lära sig spela episk filmmusik så är det helt upp till eleven. Min breda musikaliska bakgrund gör att jag kan anpassa undervisningen och kan hjälpa eleverna att utveckla sitt pianospel inom de flesta genrer och musikstilar. I dessa lektioner inkluderas gärna även teknikträning, musikteori och improvisation. 
       Välkommen att anmäla ditt barns intresse för en kostnadsfri första träff med mig, Suzana.

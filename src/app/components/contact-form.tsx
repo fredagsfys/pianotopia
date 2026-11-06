@@ -1,7 +1,6 @@
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui/input";
 import { Textarea } from "@/app/components/ui/textarea";
-import emailjs from "@emailjs/browser";
 import { RefObject, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -69,12 +68,15 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
     if (loading) return; // ignore double submits while sending
     setLoading(true); // ✅ Start loading
 
-    emailjs
-      .send(
-        "service_dcxeqrv",
-        "template_mxcq4bn",
-        formData,
-        "3f9GhNS-krYicIcaG",
+    // Loaded on submit only, it isn't needed to render the page
+    import("@emailjs/browser")
+      .then(({ default: emailjs }) =>
+        emailjs.send(
+          "service_dcxeqrv",
+          "template_mxcq4bn",
+          formData,
+          "3f9GhNS-krYicIcaG",
+        ),
       )
       .then(() => {
         setFormData({ name: "", email: "", message: "" });

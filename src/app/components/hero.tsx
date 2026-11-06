@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Picture from "./ui/picture";
 import { useEffect, useState } from "react";
 
 interface HeroProps {
@@ -23,8 +23,8 @@ export default function Hero({ scrollToBottom }: HeroProps) {
   return (
     <div className="relative flex items-center justify-center h-screen overflow-hidden text-justify">
       {/* First video frame, shown instantly until the video takes over */}
-      <Image
-        src="/videos/piano-poster.webp"
+      <Picture
+        src="/videos/piano-poster"
         alt=""
         fill
         priority
@@ -40,7 +40,12 @@ export default function Hero({ scrollToBottom }: HeroProps) {
           poster="/videos/piano-poster.webp"
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          {/* Smallest first; browsers that can't decode VP9 fall through to H.264 */}
+          {/* Smallest first; browsers skip codecs they can't decode (AV1, then
+              VP9) and fall through to H.264 */}
+          <source
+            src="/videos/piano-av1.mp4"
+            type='video/mp4; codecs="av01.0.05M.08"'
+          />
           <source src="/videos/piano.webm" type='video/webm; codecs="vp9"' />
           <source src="/videos/piano.mp4" type="video/mp4" />
           <source src="/videos/piano.ogg" type="video/ogg" />

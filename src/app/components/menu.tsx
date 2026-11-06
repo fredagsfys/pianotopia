@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Picture from "./ui/picture";
 import { useEffect, useState } from "react";
 
 export default function Menu() {
@@ -20,8 +20,8 @@ export default function Menu() {
 
   return (
     <div className="mx-auto container rounded-full flex items-center justify-center font-bold w-64 xl:w-96">
-      <Image
-        src={`/images/logo.webp`}
+      <Picture
+        src="/images/logo"
         alt="Pianotopia"
         width={600}
         height={600}
@@ -36,8 +36,8 @@ export default function Menu() {
         }`}
       >
         <div className="flex items-start w-24 container">
-          <Image
-            src={`/images/logo-alt.webp`}
+          <Picture
+            src="/images/logo-alt"
             alt="Pianotopia"
             width={600}
             height={600}
