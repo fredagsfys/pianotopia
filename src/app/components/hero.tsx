@@ -1,23 +1,52 @@
+import Image from "next/image";
+import { useEffect, useState } from "react";
+
 interface HeroProps {
   scrollToBottom: (timeout: number) => void;
 }
 
 export default function Hero({ scrollToBottom }: HeroProps) {
+  // Mount the video only after the page has loaded, so its download doesn't
+  // compete with the logo, fonts and scripts for bandwidth
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      setShowVideo(true);
+      return;
+    }
+    const onLoad = () => setShowVideo(true);
+    window.addEventListener("load", onLoad, { once: true });
+    return () => window.removeEventListener("load", onLoad);
+  }, []);
+
   return (
     <div className="relative flex items-center justify-center h-screen overflow-hidden text-justify">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        {/* Smallest first; browsers that can't decode VP9 fall through to H.264 */}
-        <source src="/videos/piano.webm" type='video/webm; codecs="vp9"' />
-        <source src="/videos/piano.mp4" type="video/mp4" />
-        <source src="/videos/piano.ogg" type="video/ogg" />
-        Your browser does not support the video tag.
-      </video>
+      {/* First video frame, shown instantly until the video takes over */}
+      <Image
+        src="/videos/piano-poster.webp"
+        alt=""
+        fill
+        priority
+        fetchPriority="high"
+        className="object-cover"
+      />
+      {showVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/videos/piano-poster.webp"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          {/* Smallest first; browsers that can't decode VP9 fall through to H.264 */}
+          <source src="/videos/piano.webm" type='video/webm; codecs="vp9"' />
+          <source src="/videos/piano.mp4" type="video/mp4" />
+          <source src="/videos/piano.ogg" type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
+      )}
       <div
         className="
             z-10
