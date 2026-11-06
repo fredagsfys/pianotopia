@@ -1,12 +1,12 @@
-import Image from "next/image";
+import Picture from "./ui/picture";
 
 export default function Biography() {
   return (
     <section>
       <div className="bg-primary text-white relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full items-center lg:px-24 container mx-auto px-4 text-justify">
-          <Image
-            src="/images/bio/suzana.webp"
+          <Picture
+            src="/images/bio/suzana"
             alt="Suzana Spasevska Hermansen"
             width={500}
             height={500}

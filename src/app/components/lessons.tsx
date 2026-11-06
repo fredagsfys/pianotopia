@@ -5,11 +5,17 @@ import {
   CardHeader,
 } from "@/app/components/ui/card";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import { RefObject, useState } from "react";
+import dynamic from "next/dynamic";
+import { RefObject, useEffect, useState } from "react";
 import { lessons } from "../data/lessons-data";
-import LessonDetails, { Lesson } from "./lesson-details";
+import type { Lesson } from "./lesson-details";
 import { Button } from "./ui/button";
+import Picture from "./ui/picture";
+
+// The details dialog (and its Headless UI dependency) is only needed after a
+// click, so keep it out of the initial bundle
+const loadLessonDetails = () => import("./lesson-details");
+const LessonDetails = dynamic(loadLessonDetails, { ssr: false });
 
 interface LessonsProps {
   titleRef: RefObject<HTMLHeadingElement | null>;
@@ -19,6 +25,14 @@ interface LessonsProps {
 export const Lessons = ({ titleRef, scrollToBottom }: LessonsProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLesson, setLesson] = useState<Lesson | null>(null);
+
+  // Fetch the dialog once the page has loaded, so it opens instantly on click
+  useEffect(() => {
+    const preload = () => void loadLessonDetails();
+    if (document.readyState === "complete") preload();
+    else window.addEventListener("load", preload, { once: true });
+    return () => window.removeEventListener("load", preload);
+  }, []);
 
   const handleEnrol = () => {
     scrollToBottom(500);
@@ -41,7 +55,7 @@ export const Lessons = ({ titleRef, scrollToBottom }: LessonsProps) => {
             >
               <CardHeader className="p-0">
                 <div className="overflow-hidden h-56 bg-primary">
-                  <Image
+                  <Picture
                     src={lesson.image}
                     alt={lesson.name}
                     width={800}

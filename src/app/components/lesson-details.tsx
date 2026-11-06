@@ -1,8 +1,8 @@
 "use client";
 
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-import Image from "next/image";
 import { Card, CardContent, CardHeader } from "./ui/card";
+import Picture from "./ui/picture";
 
 interface ModalProps {
   open: boolean;
@@ -35,7 +35,7 @@ export default function Modal({ open, setOpen, lesson, onEnrol }: ModalProps) {
                 <Card className="overflow-hidden animate-on-scroll group transition-all duration-300 bg-white/80">
                   <CardHeader className="p-0">
                     <div className="overflow-hidden h-56 bg-primary">
-                      <Image
+                      <Picture
                         src={lesson.image}
                         alt=""
                         width={800}
