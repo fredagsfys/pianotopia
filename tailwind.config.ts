@@ -1,4 +1,3 @@
-import * as tailwindLineClamp from "@tailwindcss/line-clamp";
 import type { Config } from "tailwindcss";
 import * as tailwindAnimate from "tailwindcss-animate";
 
@@ -41,5 +40,5 @@ export default {
       },
     },
   },
-  plugins: [tailwindAnimate, tailwindLineClamp],
+  plugins: [tailwindAnimate],
 } satisfies Config;

@@ -12,9 +12,10 @@ export default function Hero({ scrollToBottom }: HeroProps) {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
+        {/* Smallest first; browsers that can't decode VP9 fall through to H.264 */}
+        <source src="/videos/piano.webm" type='video/webm; codecs="vp9"' />
         <source src="/videos/piano.mp4" type="video/mp4" />
         <source src="/videos/piano.ogg" type="video/ogg" />
-        <source src="/videos/piano.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
       <div

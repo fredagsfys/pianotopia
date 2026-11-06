@@ -36,6 +36,27 @@ export const metadata: Metadata = {
   },
 };
 
+// schema.org data so search engines understand the business behind the site
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Pianotopia",
+  description: "Privat pianoskola i Kalmar.",
+  url: "https://pianotopia.se",
+  logo: "https://pianotopia.se/logo10.png",
+  founder: { "@type": "Person", name: "Suzana Spasevska Hermansen" },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kalmar",
+    addressCountry: "SE",
+  },
+  areaServed: ["Kalmar", "Nybro", "Öland"],
+  sameAs: [
+    "https://facebook.com/profile.php?id=61572401620065",
+    "https://www.instagram.com/pianotopia_kalmar",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,6 +67,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         {children}
         <Toaster
           toastOptions={{
