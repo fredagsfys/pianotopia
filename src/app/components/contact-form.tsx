@@ -103,8 +103,8 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
               <p className="mb-2 text-sm font-normal">
                 Vi kunde tyvärr inte skicka iväg ditt meddelande pga tekniskt
                 fel. Kontakta oss gärna direkt på{" "}
-                <a href="mailto:hej@pianotopia.se" className="font-bold">
-                  hej@pianotopia.se.
+                <a href="mailto:info@pianotopia.se" className="font-bold">
+                  info@pianotopia.se.
                 </a>
               </p>
             </div>
