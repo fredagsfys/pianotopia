@@ -21,11 +21,12 @@ export default function Menu() {
   return (
     <div className="mx-auto container rounded-full flex items-center justify-center font-bold w-64 xl:w-96">
       <Image
-        src={`/logo10.png`}
+        src={`/images/logo.webp`}
         alt="Pianotopia"
         width={600}
         height={600}
         priority
+        fetchPriority="high"
         className="object-cover"
       />
 
@@ -36,7 +37,7 @@ export default function Menu() {
       >
         <div className="flex items-start w-24 container">
           <Image
-            src={`/logoalt10.png`}
+            src={`/images/logo-alt.webp`}
             alt="Pianotopia"
             width={600}
             height={600}

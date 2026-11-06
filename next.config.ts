@@ -3,6 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Static export to ./out, served by Cloudflare as static assets
   output: "export",
+  experimental: {
+    // Inline the (small) Tailwind CSS into the HTML so it doesn't block paint
+    inlineCss: true,
+  },
   images: {
     // /_next/image requires a server; serve pre-resized files instead
     loader: "custom",
