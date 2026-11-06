@@ -7,7 +7,7 @@ export default function Biography() {
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full items-center lg:px-24 container mx-auto px-4 text-justify">
           <Image
             src="/suzana.jpg"
-            alt="person"
+            alt="Suzana Spasevska Hermansen"
             width={500}
             height={500}
             className="rounded-2xl relative w-full object-cover aspect-video object-top lg:object-fill lg:aspect-auto lg:w-72 -my-4 lg:-my-4 mb-24"

@@ -22,7 +22,7 @@ export default function Menu() {
     <div className="mx-auto container rounded-full flex items-center justify-center font-bold w-64 xl:w-96">
       <Image
         src={`/logo10.png`}
-        alt="logotype"
+        alt="Pianotopia"
         width={600}
         height={600}
         priority
@@ -37,7 +37,7 @@ export default function Menu() {
         <div className="flex items-start w-24 container">
           <Image
             src={`/logoalt10.png`}
-            alt="logotype"
+            alt="Pianotopia"
             width={600}
             height={600}
             className="object-cover z-50"
