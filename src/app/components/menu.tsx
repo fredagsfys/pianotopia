@@ -25,6 +25,7 @@ export default function Menu() {
         alt="logotype"
         width={600}
         height={600}
+        priority
         className="object-cover"
       />
 
