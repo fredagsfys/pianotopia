@@ -43,6 +43,7 @@ const structuredData = {
   name: "Pianotopia",
   description: "Privat pianoskola i Kalmar.",
   url: "https://pianotopia.se",
+  email: "hej@pianotopia.se",
   logo: "https://pianotopia.se/logo10.png",
   founder: { "@type": "Person", name: "Suzana Spasevska Hermansen" },
   address: {
