@@ -45,6 +45,8 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Pianotopia",
+  legalName: "Pianotopia AB",
+  taxID: "559514-5425",
   description: "Privat pianoskola i Kalmar.",
   url: "https://pianotopia.se",
   email: "hej@pianotopia.se",
@@ -52,6 +54,8 @@ const structuredData = {
   founder: { "@type": "Person", name: "Suzana Spasevska Hermansen" },
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Sidenvägen 1A",
+    postalCode: "393 55",
     addressLocality: "Kalmar",
     addressCountry: "SE",
   },
