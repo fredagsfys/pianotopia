@@ -178,19 +178,6 @@ export const ContactForm = ({ nameInputRef }: ContactFormProps) => {
             {loading ? <AccordionLoader /> : "Skicka"}
           </button>
         </form>
-        <address className="mt-12 rounded-2xl bg-white/10 p-8 text-left not-italic text-white/80">
-          PIANOTOPIA AB
-          <br />
-          Sidenvägen 1A
-          <br />
-          393 55 Kalmar
-          <br />
-          Org.nr. 559514-5425
-          <br />
-          <a href="mailto:hej@pianotopia.se" className="underline">
-            hej@pianotopia.se
-          </a>
-        </address>
       </div>
       {showToaster &&
         createPortal(
