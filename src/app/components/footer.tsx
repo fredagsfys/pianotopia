@@ -93,10 +93,7 @@ const Footer = () => {
           </div>
           <p className="text-sm text-gray-200">
             {new Date().getFullYear()} Pianotopia. | Följ oss gärna på sociala
-            medier. |{" "}
-            <a href="/villkor" className="underline hover:text-white">
-              Villkor
-            </a>
+            medier.
           </p>
         </div>
       </div>
