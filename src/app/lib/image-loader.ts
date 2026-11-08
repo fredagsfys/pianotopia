@@ -6,7 +6,7 @@ import type { ImageLoaderProps } from "next/image";
 const RESPONSIVE: Record<string, number[]> = {
   "/images/lessons/grupplektioner": [384, 640, 828, 1200, 1920],
   "/images/lessons/individuella": [384, 640, 828, 1200, 1920],
-  "/images/bio/suzana": [640, 828, 1200, 1500],
+  "/images/bio/suzana": [640, 828, 896],
 };
 
 // Static export has no /_next/image server, so pick the smallest pre-resized
