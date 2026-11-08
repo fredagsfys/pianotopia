@@ -22,7 +22,9 @@ export default function Hero({ scrollToBottom }: HeroProps) {
 
   return (
     <div className="relative flex items-center justify-center h-screen overflow-hidden text-justify">
-      {/* First video frame, shown instantly until the video takes over */}
+      {/* First video frame, shown instantly until the video takes over. The
+          video has no poster of its own (it would download a second copy);
+          until it has a frame it's transparent and this shows through. */}
       <Picture
         src="/videos/piano-poster"
         alt=""
@@ -37,7 +39,6 @@ export default function Hero({ scrollToBottom }: HeroProps) {
           muted
           loop
           playsInline
-          poster="/videos/piano-poster.webp"
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           {/* Smallest first; browsers skip codecs they can't decode (AV1, then
