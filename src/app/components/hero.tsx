@@ -45,7 +45,7 @@ export default function Hero({ scrollToBottom }: HeroProps) {
               VP9) and fall through to H.264 */}
           <source
             src="/videos/piano-av1.mp4"
-            type='video/mp4; codecs="av01.0.05M.08"'
+            type='video/mp4; codecs="av01.0.01M.08"'
           />
           <source src="/videos/piano.webm" type='video/webm; codecs="vp9"' />
           <source src="/videos/piano.mp4" type="video/mp4" />
