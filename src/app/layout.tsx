@@ -14,8 +14,12 @@ const geistMono = Cormorant({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pianotopia.se"),
-  title: "pianotopia.se",
-  description: "Pianotopia.se - Privat pianoskola i Kalmar.",
+  title: "Pianotopia – Pianolektioner för barn i Kalmar",
+  description:
+    "Pianolektioner för barn i Kalmar med Suzana Spasevska Hermansen. Ledorden är kreativitet, lekfullhet och gemenskap – anmäl ditt barns intresse idag!",
+  // The site is also reachable on its workers.dev address; point search
+  // engines at the real domain
+  alternates: { canonical: "/" },
   keywords: [
     "pianolärare i Kalmar",
     "piano",
@@ -27,8 +31,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Suzana Spasevska Hermansen" }],
   openGraph: {
-    title: "Pianotopia",
-    description: "Pianotopia.se - Privat pianoskola i Kalmar.",
+    title: "Pianotopia – Pianolektioner för barn i Kalmar",
+    description:
+      "Pianolektioner för barn i Kalmar med Suzana Spasevska Hermansen. Ledorden är kreativitet, lekfullhet och gemenskap – anmäl ditt barns intresse idag!",
     images: "/logo10.png",
     url: "/",
     type: "website",

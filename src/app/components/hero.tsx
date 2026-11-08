@@ -27,7 +27,7 @@ export default function Hero({ scrollToBottom }: HeroProps) {
           until it has a frame it's transparent and this shows through. */}
       <Picture
         src="/videos/piano-poster"
-        alt=""
+        alt="Barn som spelar piano"
         fill
         priority
         fetchPriority="high"
