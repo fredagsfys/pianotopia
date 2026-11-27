@@ -1,0 +1,40 @@
+// Starter spec, read from the code and traces by portal (no AI).
+// It says what exists. Add what the code can't: domains, your names,
+// rules, and what you plan to build.
+// Conventions: https://portal.haris-d21.workers.dev/skills/portal-architecture/SKILL.md
+model {
+  system = domain 'pianotopia' {
+    pianotopia = service 'pianotopia' {  // wrangler.jsonc:3
+      technology 'Cloudflare Worker'
+      metadata {
+        code 'scripts/**, src/**'
+        otel_service 'pianotopia'
+      }
+      scripts = component 'scripts' {
+        metadata {
+          code 'scripts/**'
+        }
+      }
+      app = component 'app' {
+        metadata {
+          code 'src/app/**'
+        }
+      }
+    }
+  }
+
+}
+
+specification {
+  element domain
+  element service
+  element event
+  element datastore
+  element infra
+  element component
+  relationship request
+  relationship publishes
+  relationship consumes
+  relationship reads
+  relationship writes
+}
