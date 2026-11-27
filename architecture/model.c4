@@ -5,8 +5,20 @@
 model {
   system = domain 'pianotopia' {
     pianotopia = service 'pianotopia' {  // wrangler.jsonc:3
+      technology 'Cloudflare Worker'
       metadata {
+        code 'scripts/**, src/**'
         otel_service 'pianotopia'
+      }
+      scripts = component 'scripts' {
+        metadata {
+          code 'scripts/**'
+        }
+      }
+      app = component 'app' {
+        metadata {
+          code 'src/app/**'
+        }
       }
     }
   }
@@ -19,6 +31,7 @@ specification {
   element event
   element datastore
   element infra
+  element component
   relationship request
   relationship publishes
   relationship consumes
